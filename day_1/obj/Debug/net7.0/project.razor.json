@@ -1,0 +1,20 @@
+{
+  "SerializedFilePath": "a:\\work\\class\\1670\\day_1\\obj\\Debug\\net7.0\\project.razor.json",
+  "FilePath": "a:\\work\\class\\1670\\day_1\\day_1.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-3.0",
+    "LanguageVersion": "6.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-3.0"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 1100
+  },
+  "RootNamespace": "day_1",
+  "Documents": [],
+  "SerializationFormat": "0.3"
+}

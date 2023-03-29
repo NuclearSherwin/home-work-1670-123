@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qZSOqS581s/ua9HwCWBD+7MykstH0ZtNrdJyf90+6ssCXi1u72olG1XFSZ0Ula6aGIA9eLAWcdRUNWKzG5mhGA==",
+  "success": true,
+  "projectFilePath": "A:\\work\\class\\1670\\day_2\\day_2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\paika\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512"
+  ],
+  "logs": []
+}

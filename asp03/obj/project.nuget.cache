@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "PDeOGgcb8dj7fTfhieIlknNf1VoIHhNbZ09P5kd1zSxd1Lwc+Ah0se/Hwg32yVVmPwgBWeMbWv6KMnL6gqSYug==",
+  "success": true,
+  "projectFilePath": "A:\\work\\class\\1670\\asp03\\asp03.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\paika\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
