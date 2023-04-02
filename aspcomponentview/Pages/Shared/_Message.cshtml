@@ -1,0 +1,10 @@
+@{
+  var title = ViewData["tittleContent"] ?? "THONG BAO";
+  var content = ViewData["content"] ?? "Noi dung thong bao"; 
+}
+
+<div class="alert alert-success">
+    <strong>@title</strong>
+    <br />
+    @content
+</div> 

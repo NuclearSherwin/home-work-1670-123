@@ -1,0 +1,31 @@
+@page "/firstpage/{count:int?}"
+
+@{
+    Layout = "_MyLayout";
+}
+
+
+<h1 style="color: green;">This is first Razor page  Right now is </h1>
+<p>The time right now is: <strong>@System.DateTime.UtcNow</strong></p>
+
+
+@{
+    var a = 2;
+    var b = 3;    
+
+    var countString = this.Request.RouteValues["count"]??"0";
+
+    int count = Int32.Parse(countString.ToString());
+ 
+    <p>Square of a is: @Math.Sqrt(a)</p>
+
+}
+
+<p>So lan lap la @count</p>
+
+<p> Sum of @a and @b is: @(a + b)</p>
+<ol>
+    @for (int i = 1; i <= count; i++) {
+        <li>number @i</li>
+    }   
+</ol>

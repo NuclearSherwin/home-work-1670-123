@@ -1,0 +1,46 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Title";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome - @Model.ABC</h1>
+    
+    <p class="display-4 text-danger">Hello @this.Title</p>
+    <p>@Html.Raw("<h2>Hello Everyone!</h2>")</p>
+
+    @{
+        var greeting = "Xin Chao";
+        void SayHi(string name) {
+            var msg = greeting + " " + name;
+            <p>@msg</p>
+        }
+    }
+</div>
+A
+<div>
+    @{
+        SayHi("Phong");
+        @* loop through a list *@
+
+        string[] names = new String[] {"Phong", "PaikaX", "Sherwin", "Nuclear", "Azure", "Eren"};
+
+        foreach(var name in names) {
+            <ul>
+                <li>@name</li>
+            </ul>
+        }
+
+        // global field
+        @functions{
+            string Title {get;set;} = "PaikaX";
+        }
+
+    }
+
+
+    
+    
+</div>

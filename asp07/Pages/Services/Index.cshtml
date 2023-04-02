@@ -1,0 +1,27 @@
+@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h1>Service index page!</h1>
+<h2>@ViewData["mydata"]</h2>
+<ul>
+    <li><a asp-page="cooking">Cooking service</a></li>
+    <li><a asp-page="/newproducts" asp-area="product" >New products</a></li>
+</ul>
+
+@functions{
+    string title {get;set;} = "This is the PRODUCT RAZOR Page";
+
+    // OnGet, OnGetAbc
+    // OnPost(), OnPostAbc() 
+    // Handler
+
+    public void OnGet(){
+        System.Console.WriteLine("Access with GET Method");
+        ViewData["mydata"] = "Mai Dinh Phong 2023";
+    }
+
+    public void OnGetAbc() {
+        System.Console.WriteLine("Access with OnGetAbc");
+        ViewData["mydata"] = "Mai Dinh Phong 2023 ABC"; 
+    }
+}

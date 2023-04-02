@@ -1,0 +1,16 @@
+@{
+    Layout = "_MyLayout";
+}
+
+<div class="row">
+    <div class="col-3 bg-danger">
+        MENU lEFT
+    </div>
+    <div class="col-9 bg-success">
+        @RenderBody()
+    </div>
+</div>
+
+@section Footer{
+    <p>Content footer of Post 1</p>
+}

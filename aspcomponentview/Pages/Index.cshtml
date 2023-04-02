@@ -1,0 +1,66 @@
+﻿@page
+@model IndexModel
+@using Phong
+@{
+    ViewData["Title"] = "Home page";
+    ViewData["tittleContent"] = "NEW PRODUCTS";
+    ViewData["content"] = "you are viewing the new products";
+}
+
+<form method="post">
+    <label>Enter your name:</label>
+    <input type="text" name="username" />
+    <input type="submit" value="submit" />
+</form>
+ 
+@await Html.PartialAsync("_Message")
+
+@{
+    var product1 = new Product() { Name = "IPhoneX", Description = "IPhoneX of Apple", Price=1000};
+    var product2 = new Product() { Name = "Samsung galaxy", Description = "Samsung galaxy", Price=500};
+    var product3 = new Product() { Name = "Redmi S2", Description = "RedmiS2", Price=600};
+    var product4 = new Product() { Name = "Xiaomi Note 8", Description = "Xiaomi Note ", Price=800};
+
+}
+
+@await Component.InvokeAsync("ProductBox")
+
+<div class="row bg-info">
+    <div class="col">
+        <partial name="_ProductItem" model="product1"/>
+    </div>
+    <div class="col">
+        @await Html.PartialAsync("_ProductItem", product2)
+    </div>
+    <div class="col">
+        @{
+            await Html.RenderPartialAsync("_ProductItem", product3);
+        }
+    </div>
+</div>
+
+<div class="row bg-warning">
+    @{
+     var products = new List<Product>() {
+        new Product() {Name = "SP 1", Description = "Mo ta cho SP 1", Price = 122},
+        new Product() {Name = "SP 2", Description = "Mo ta cho SP 2", Price = 122},
+        new Product() {Name = "SP 3", Description = "Mo ta cho SP 3", Price = 122},
+        new Product() {Name = "SP 4", Description = "Mo ta cho SP 4", Price = 122},
+    };
+
+    // loops it
+    foreach (var product in products) {
+        <div class="col">
+            <partial name="_ProductItem" model="product"/>
+        </div>
+        <br />
+        
+    }
+}
+    
+</div>
+
+
+
+
+
