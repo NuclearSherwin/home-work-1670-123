@@ -1,0 +1,43 @@
+﻿@page "/product/{id:int?}"
+@model pagemodele.Pages.ProductPageModel
+
+@{
+    var product = Model.product;
+    @* var products = Model._productService.AllProduct(); *@
+}
+
+<h1>@ViewData["Title"]</h1>
+@if (product != null)
+{
+    <h2>@product.Name</h2>
+    <p>Description: @product.Description</p>
+    <p>Price: @product.Price</p>
+
+    <p>
+        <a asp-page="ProductPage" asp-route-id="">Product list</a> 
+    </p>
+    <form method="post" asp-page="ProductPage" asp-page-handler="delete" asp-route-id="@product.Id" >
+       <button type="submit" class="btn btn-danger" >Xoa</button>
+    </form>
+}
+@* else 
+{
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a asp-page="ProductPage" asp-route-id="@item.Id">
+                    @item.Name 
+                </a>
+            </li>
+        }
+    </ul>
+} *@
+
+
+<p>
+    <a class="btn btn-success" asp-page="ProductPage" asp-page-handler="OnGetLastProduct" >San pham cuoi</a>
+    <br />
+    <a class="btn btn-danger" asp-page="ProductPage" asp-page-handler="RemoveAll" >Xoa san pham</a>
+    <a class="btn btn-primary" asp-page="ProductPage" asp-page-handler="Load" >Load lai san pham</a>
+</p> 

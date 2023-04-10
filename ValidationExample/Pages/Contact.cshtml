@@ -1,0 +1,55 @@
+﻿@page
+@model ValidationExample.Pages.ContactModel
+@{
+}
+
+<h1>Contact</h1>
+<form method="post" asp-page="Contact" class="m-2 p-3 alert-danger" enctype="multipart/form-data" >
+
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label asp-for="customerInfo.CustomerName"></label>
+        <input asp-for="customerInfo.CustomerName" class="form-group" />
+        <span class="text-red" asp-validation-for="customerInfo.CustomerName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="customerInfo.Email"></label>
+        <input asp-for="customerInfo.Email" class="form-group" />
+        <span class="text-red" asp-validation-for="customerInfo.Email"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="customerInfo.YearOfBirth"></label>
+        <input asp-for="customerInfo.YearOfBirth" class="form-group" />
+        <span class="text-red" asp-validation-for="customerInfo.YearOfBirth"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FileUpload"></label>
+        <input asp-for="FileUpload" class="form-group" />
+        <span class="text-red" asp-validation-for="FileUpload"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FileUploads"></label>
+        <input asp-for="FileUploads" class="form-group" />
+        <span class="text-red" asp-validation-for="FileUploads"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+@if (@Model.customerInfo != null)
+{
+    <p>Thông tin nhận được</p>
+    <div>
+    <ul>
+        <li>Username: @Model.customerInfo.CustomerName</li>
+        <li>Email: @Model.customerInfo.Email</li>
+        <li>BirthDay: @Model.customerInfo.YearOfBirth</li>
+    </ul>
+</div>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

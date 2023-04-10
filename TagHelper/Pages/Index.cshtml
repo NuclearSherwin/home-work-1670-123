@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@addTagHelper *, taghelperexample
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<a asp-route="ViewProducts" asp-route-id="1" >View product 1</a>
+
+<form>
+    <label asp-for="UserName"></label>
+    <input asp-for="UserName" />
+</form>
+
+
+@{
+    var productList = new List<String> {
+        "Ten san pham 1",
+        "Ten san pham 2",
+        "Ten san pham 2"
+    };
+}
+
+<mylist
+    list-title = "Danh sach san pham"
+    list-items = "@productList" 
+> 
+</mylist>
